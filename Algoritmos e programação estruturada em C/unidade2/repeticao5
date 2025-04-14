@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main(){
+
+    int idade, soma = 0, contPessoas = 0;
+
+    while(1){
+        printf("Digitw a idade (ou 0 para encerrar): ");
+        scanf("%d", &idade);
+
+
+        if(idade ==0){
+            break;
+        }
+
+        if(idade < 0){
+            printf("Não existe idade negativa! Tente novamente... \n");
+            continue;
+        }
+
+        som += idade;
+        contPessoas++;
+    }
+
+    if(contPessoas > 0){
+        float media = (float) soma / contPessoas; /*(float) - cast -> adicionar um ponto flutuante ao número real / 
+        soma e contPessoas são números inteiros, mas ao calcular a média o resulto pode ser uma valor real*/
+        printf("Média das idades: %.2f", media);
+    }else{
+        printf("Nenhum idade foi fornecida.\n");
+    }
+
+
+    return 0
+}
